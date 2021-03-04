@@ -1,0 +1,27 @@
+.menu {
+
+    margin-bottom: 10px;
+
+}
+
+#indiceContenido {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.propioindice {
+
+    font-size: 30px;
+    margin-bottom: 16px;
+
+}
+
+.menu:hover {
+
+    color: red;
+    cursor: pointer;
+
+}
+
