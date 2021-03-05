@@ -1,3 +1,16 @@
+body {
+
+
+}
+
+.kokodayo {
+ 
+    width : 1800px;
+    height : 770px;
+    border-radius: 169px;
+
+}
+
 .menu {
 
     text-decoration: none;
@@ -34,11 +47,16 @@ h1 {
     font-size: 30px;
 
 }
-/*
+
+.err {
+
+    color: red;
+
+}
+
 .cuadrado {
 
-    border: 1px solid rgb(12, 112, 12);
+    border: 1px solid #339533;
     background-color: rgb(176, 228, 180);
 
 }
-*/
