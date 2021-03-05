@@ -5,7 +5,9 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Referencia al documento css para que se pueda aplicar -->
         <link rel="stylesheet" type="text/css" href="estilo.css">
+        <!-- Título del documento -->
         <title>Tutorial de HTML</title>
 
     </head>
@@ -14,36 +16,44 @@
 
         <section class="indiceContenido">
 
+            <!-- Declaración del índice, los valores de href indican la id hacia la que acceder, estas id estan más abajo en otras secciones -->
+            <!-- Índice con id para volver a lo mas alto de la página desde la opción de abajo -->
             <a id="indice" class="propioindice">Índice</a>
             <a href="#formato" class="menu">Formato</a>
             <a href="#titulodoc" class="menu">Título</a>
             <a href="#metadatos" class="menu">Metadatos</a>
             <a href="#headings" class="menu">Formato de Título</a>
             <a href="#secciones" class="menu">Secciones</a>
-            <a href="#articulovseccion" class="menu">Articulo VS Sección</a>
-            <a href="#cosasmuchasjuntas" class="menu">Documento</a>
             <a href="#agrupacion" class="menu">Agrupación</a>
             <a href="#elementossemanticos" class="menu">Elementos Semánticos de Texto</a>
-            <a href="#contenidoencajado" class="menu">Contenido Encajado: Imagenes</a>
-            <a href="#simbolosespeciales" class="menu">Símbolos Especiales</a>
-            <a href="#datostabulados" class="menu">Datos Tabulados: Tablas</a>
+            <a href="#contenidoencajado" class="menu">Contenido Encajado, Imagenes</a>
+            <a href="#tablas" class="menu">Contenido Encajado, Imagenes</a>
 
         </section>
+
+        <hr><!-- Línea de separación entre los dos índices-->
 
         <section class="indiceContenido">
             
-            <a class="propioindice">Enlaces Miscelaneos</a>
-            <a href="TutorialCSS.html" class="menu" target="_blank">Tutorial de CSS</a>
-            <a href="VideosUtiles.html" class="menu" target="_blank">Vídeos Útiles</a>
+            <a class="propioindice">Enlaces Misceláneos</a>
+            <!-- href indica el documento al que se quiere acceder, funciona ya que el documento está en la misma carpeta que este,
+            para un documento de otra carpeta habría que escribir la ruta en la que esté -->
+            <!-- Target indicará que los enlaces se abriran en otras pestañas-->
+            <a href="https://dev.w3.org/html5/html-author/charref" class="menu" target="_blank">Carácteres Especiales en HTML</a>
+            <a href="VideosVarios.html" class="menu" target="_blank">Varios Vídeos Sin Contexto</a>
 
         </section>
         
+        <hr><!-- Línea de separación entre el índice y el texto de más abajo-->
+
         <section id="formato">
 
+            <!-- etiqueta de título -->
             <h1>Formato</h1>
             <p>Los documentos HTML siempre tienen un mismo formato, estos empiezan por un inicio, este inicio contiene la declaración
                  del documento y la definicion del idioma de este &lpar;Junto con el inicio del código&rpar;.</p>
             <p>Declaración del documento&colon;</p>
+            <!-- la clase "cuadrado" tiene un apartado en el documento estilo.css para dejar el texto dentro de un cuadrado verde -->
             <p class="cuadrado">&lt;&excl;doctype html&gt;</p>
             <p>Definir el lenguaje por defecto&colon;</p>
             <p class="cuadrado">&lt;html lang&equals;es&gt;</p>
@@ -84,7 +94,7 @@
             <p>Adaptar las palabras del documento segun el tamaño del dispositivo&colon;</p>
             <p class="cuadrado">&lt;meta name&equals;&quot;viewport&quot; content&equals;&quot;width&equals;device-width, initial-scale
                 &equals;1.0&quot;</p>
-            <p>Definir el nombre del autor del documento. El nombre de autor que se quiera definir será escrito dentro del valor 
+            <p>Definir el nombre del autor del documento. El nombre de autor que se quiera definir será escrito dentro de
                 &quot;content&quot;&colon;</p>
             <p class="cuadrado">&lt;meta name&equals;&quot;author&quot; content&equals;&quot; &quot;&gt;</p>
 
@@ -96,13 +106,16 @@
             <p>En html hay etiquetas especificas para los títulos, estas se se representan con una h y un número del 1 al 6, siendo
                 1 el formato predefinido de título más grande y 6 el más pequeño. </p>
             <p>A la hora de escribirlo&colon;</p>
+
             <div class="cuadrado">
+
                 <p>&lt;h1&gt;&lt;&sol;h1&gt;</p>
                 <p>&lt;h2&gt;&lt;&sol;h2&gt;</p>
                 <p>&lt;h3&gt;&lt;&sol;h3&gt;</p>
                 <p>&lt;h4&gt;&lt;&sol;h4&gt;</p>
                 <p>&lt;h5&gt;&lt;&sol;h5&gt;</p>
                 <p>&lt;h6&gt;&lt;&sol;h6&gt;</p>
+
             </div>
 
         </section>
@@ -114,9 +127,200 @@
                 situen dentro de cada seccion. </p>
             <p>Para crear una sección&colon;</p>
             <p class="cuadrado">&lt;section&gt; &lt;&sol;section&gt;</p>
+            <p>También se puede añadir un artículo, el cual tiene la misma función, pero esta centrado para englobar secciones del
+                código más específicas.</p>
+            <p>Para crear un artículo&colon;</p>
+            <p class="cuadrado">&lt;article&gt; &lt;&sol;article&gt;</p>
 
         </section>
-        
+
+        <section id="agrupacion">
+
+            <h1>Agrupación</h1>
+
+                <h2>Párrafo</h2>
+                <p>Para escribir texto en párrafos, estos se escriben dentro de la etiqueta &quot;p&quot;.</p>
+                <p>Para crear un párrafo debajo de otro, se declara otro elemento con etiqueta &quot;p&quot; debajo del anterior.</p>
+                <p>Declaración de un párrafo&colon;</p>
+                <p class="cuadrado">&lt;p&gt; &lt;&sol;p&gt;</p>
+
+                <h2>Texto Preformateado</h2>
+                <p>El texto preformateado permite mostrar el texto escrito con el mismo formato que dentro de el documendo html.</p>
+                <p>Declaración de texto preformateado&colon;</p>
+                <p class="cuadrado">&lt;pre&gt; &lt;&sol;pre&gt;</p>
+                <p>Ejemplo de texto preformateado&colon;</p>
+                <pre class="cuadrado">
+                &lt;pre&gt; Este
+                        Texto
+                            Aparecerá 
+                                Tabulado&lt;&sol;pre&gt;</pre>
+
+                <h2>Listas</h2>
+                <p>Se pueden crear tres tipos de listas de elementos dentro de un código html&colon;</p>
+
+                    <h3>Listas Ordenadas</h3>
+                    <p>Las listas ordenadas,cada vez que se añaden elementos, estos se ordenan automaticamente por un número marcando su
+                        posición.</p>
+                    <p>Ejemplo de una lista ordenada&colon;</p>
+                    <div class="cuadrado">
+
+                       <ol>
+                        <li>Primer Objeto</li>
+                        <li>Segundo Objeto</li>
+                        <li>Tercer Objeto</li>
+                        <li>Cuarto Objeto</li>
+                      </ol>
+
+                    </div>
+                    <p>Formato de una lista ordenada&colon;</p>
+                    <div class="cuadrado">
+
+                        <pre>&lt;ol&gt;</pre>
+                        <pre>   &lt;li&gt;Primer Objeto&lt;&sol;li&gt;</pre>
+                        <pre>   &lt;li&gt;Segundo Objeto&lt;&sol;li&gt;</pre>
+                        <pre>   &lt;li&gt;Tercer Objeto&lt;&sol;li&gt;</pre>
+                        <pre>   &lt;li&gt;Cuarto Objeto&lt;&sol;li&gt;</pre>
+                        <pre>&lt;&sol;ol&gt;</pre>
+
+                    </div>
+
+                    <h3>Listas Desordenadas</h3>
+                    <p>Las listas desordenadas no generan ningun tipo de orden o número a los valores que tienen dentro.</p>
+                    <p>Ejemplo de una lista desordenada&colon;</p>
+                    <div class="cuadrado">
+
+                       <ul>
+                        <li>Primer Objeto</li>
+                        <li>Segundo Objeto</li>
+                        <li>Tercer Objeto</li>
+                        <li>Cuarto Objeto</li>
+                      </ul>
+
+                    </div>
+                    <p>Formato de una lista desordenada&colon;</p>
+                    <div class="cuadrado">
+
+                        <pre>&lt;ul&gt;</pre>
+                        <pre>   &lt;li&gt;Primer Objeto&lt;&sol;li&gt;</pre>
+                        <pre>   &lt;li&gt;Segundo Objeto&lt;&sol;li&gt;</pre>
+                        <pre>   &lt;li&gt;Tercer Objeto&lt;&sol;li&gt;</pre>
+                        <pre>   &lt;li&gt;Cuarto Objeto&lt;&sol;li&gt;</pre>
+                        <pre>&lt;&sol;ul&gt;</pre>
+
+                    </div>
+
+                    <h3>Listas de Definiciones</h3>
+                    <p>Las listas de definiciones almacenan valores junto con su correspondiente descripción.</p>
+                    <p>Ejemplo de una lista de definiciones&colon;</p>
+                    <div class="cuadrado">
+
+                       <dl>
+                        <dt>Primer Objeto</dt>
+                            <dd>Este es el primer objeto</dd>
+                        <dt>Segundo Objeto</dt>
+                            <dd>Este es el segundo objeto</dd>
+                        <dt>Tercer Objeto</dt>
+                            <dd>Este es el tercer objeto</dd>
+                        <dt>Cuarto Objeto</dt>
+                            <dd>Este es el cuarto objeto</dd>
+                      </dl>
+
+                    </div>
+                    <p>Formato de una lista de definiciones&colon;</p>
+                    <div class="cuadrado">
+
+                        <pre>&lt;dl&gt;</pre>
+                        <pre>   &lt;dt&gt;Primer Objeto&lt;&sol;dt&gt;</pre>
+                        <pre>       &lt;dd&gt;Este es el primer objeto&lt;&sol;dt&gt;</pre>
+                        <pre>   &lt;dt&gt;Segundo Objeto&lt;&sol;dt&gt;</pre>
+                        <pre>       &lt;dd&gt;Este es el segundo objeto&lt;&sol;dt&gt;</pre>
+                        <pre>   &lt;dt&gt;Tercer Objeto&lt;&sol;dt&gt;</pre>
+                        <pre>       &lt;dd&gt;Este es el tercer objeto&lt;&sol;dt&gt;</pre>
+                        <pre>   &lt;dt&gt;Cuarto Objeto&lt;&sol;dt&gt;</pre>
+                        <pre>       &lt;dd&gt;Este es el cuarto objeto&lt;&sol;dt&gt;</pre>
+                        <pre>&lt;&sol;dl&gt;</pre>
+
+                    </div>
+                    
+                <h2>Línea Horizontal</h2>
+                <p>La línea horizontal sirve para separar un párrafo del siguiente.</p>
+                <p>Formato de una línea horizontal&colon;</p>
+                <p class="cuadrado">&lt;hr&gt;</p>
+
+        </section>
+
+        <section id="elementossemanticos">
+
+            <h1>Elementos Semánticos de texto</h1>
+
+                <h2>Resaltado</h2>
+                <p>El texto se puede resaltar de tres formas&colon;</p>
+                
+                    <h3>Negrita</h3>
+                    <p>Para que una parte del texto de un párrafo aparezca con letra en negrita.</p>
+                    <p class="cuadrado">&lt;p&gt; Aquí &lt;b&gt;hay&lt;&sol;b&gt; texto&lt;&sol;p&gt;</p>
+                    <p>Como aparecería el texto&colon;</p>
+                    <p>Aquí <b>hay</b> texto</p>
+
+                    <h3>Subrayada</h3>
+                    <p>Para que una parte del texto de un párrafo aparezca con letra subrayada por debajo.</p>
+                    <p class="cuadrado">&lt;p&gt; Aquí &lt;u&gt;hay&lt;&sol;u&gt; texto&lt;&sol;p&gt;</p>
+                    <p>Como aparecería el texto&colon;</p>
+                    <p>Aquí <u>hay</u> texto</p>
+
+                    <h3>Bastardilla</h3>
+                    <p>Para que una parte del texto de un párrafo aparezca con letra en cursiva.</p>
+                    <p class="cuadrado">&lt;p&gt; Aquí &lt;i&gt;hay&lt;&sol;i&gt; texto&lt;&sol;p&gt;</p>
+                    <p>Como aparecería el texto&colon;</p>
+                    <p>Aquí <i>hay</i> texto</p>
+
+                <h2>Salto de Línea</h2>
+                <p>Para poder hacer un salto de línea en el párrafo de un archivo html se debe hacer un break dentro de la frase en la que
+                    se quiera saltar, en el mismo punto en el que se quiera hacer la separación.</p>
+                <p>Como insertar un salto de línea&colon;</p>
+                <p class="cuadrado">&lt;p&gt;Aquí &lt;br&gt;hay texto&lt;&sol;p&gt;</p>
+                <p>Como aparecería el texto&colon;</p>
+                <p>Aquí <br>hay texto</p>
+
+                <h2>Hiperenlace</h2>
+                <p>Para poder insertar un hiperenlace, es necesario utilizar un contenedor tipo anchor&lpar;Ancla&rpar;, el cual
+                    tendrá un atributo el cual indicará a que página web &lpar;Se utilizará la URL de la página web&rpar;, directorio
+                    &lpar;Se utilizará el nombre del directorio seguido del nombre del archivo al que se quiere acceder&rpar; o
+                    elemento interno &lpar;Se referenciará al elemento utilizando un &num; al principio de su id&rpar; acceder. </p>
+                <p>El archor se creara de esta forma:</p>
+                <p class="cuadrado">&lt;a href&equals;&quot; &quot;&gt; &lt;&sol;a&gt;</p>
+                <p>Teniendo en cuenta que el contenido que se situará en a, ya sea un texto, una imagen,... Será el que se seleccionará
+                    a la hora de acceder al enlace proporcionado dentro de href. </p>
+                <p>Se pueden añadir dos atributos a el ancla.</p>
+                <p>Target, el cual hace que el archivo se abra en una pestaña nueva del navegador.</p>
+                <p class="cuadrado">&lt;a href&equals;&quot; &quot; target&equals;&lowbar;blank&gt; &lt;&sol;a&gt;</p>
+                <p>Download, el cual hace que en vez de acceder al elemento en cuestión, este se descarge.</p>
+                <p class="cuadrado">&lt;a href&equals;&quot; &quot; download&gt; &lt;&sol;a&gt;</p>
+
+        </section>
+
+        <section id="contenidoencajado">
+
+            <h1>Contenido Encajado, Imagenes</h1>
+            <p>Se puede insertar contenido encajado como imagenes estáticas e imagenes animadas.</p>
+            <p>Para insertar una imagen se necesita especificar el archivo, dentro de un atributo src. Tambien se pueden añadir
+                modificaciones en la altura &lpar;height&rpar; y anchura &lpar;width&rpar; de la imagen y una descripción a esta. </p>
+            <p>Insertar una imagen&colon;</p>
+            <p class="cuadrado">&lt;img src&equals;&quot; &quot;&gt;</p>
+            <p>Insertar altura y anchura&colon;</p>
+            <p class="cuadrado">&lt;img src&equals;&quot; &quot; height&equals; width&equals; &gt;</p>
+            <p>Insertar una descripción a la imagen&colon;</p>
+            <p class="cuadrado">&lt;img src&equals;&quot; &quot; alt&equals;&quot; &quot;&gt;</p>
+
+        </section>
+
+        <section id="tablas">
+
+            <h1>Tablas</h1>
+            <p>El elemento de tabla representa información en más de una dimensión, en forma de una tabla.</p>
+
+        </section>    
+
     </body>
 
 </html>
