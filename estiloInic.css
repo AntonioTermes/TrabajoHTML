@@ -1,0 +1,23 @@
+body {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#prog {
+
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#portada {
+
+    width: 80%;
+
+}
