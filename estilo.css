@@ -43,11 +43,22 @@ hr {
 
 }
 
+table {
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    border: 1px solid #339533;
+    background-color: rgb(176, 228, 180);
+
+}
+
 .kokodayo {
  
-    width : 1800px;
-    height : 770px;
-    border-radius: 169px;
+    width: 14%;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-radius: 50px;
+    border: 1px solid #339533;
 
 }
 

@@ -27,7 +27,7 @@
             <a href="#agrupacion" class="menu">Agrupación</a>
             <a href="#elementossemanticos" class="menu">Elementos Semánticos de Texto</a>
             <a href="#contenidoencajado" class="menu">Contenido Encajado, Imagenes</a>
-            <a href="#tablas" class="menu">Contenido Encajado, Imagenes</a>
+            <a href="#tablas" class="menu">Tablas</a>
 
         </section>
 
@@ -317,9 +317,132 @@
         <section id="tablas">
 
             <h1>Tablas</h1>
-            <p>El elemento de tabla representa información en más de una dimensión, en forma de una tabla.</p>
+            <p>El elemento de tabla representa información en más de una dimensión. Las tablas disponen de dos partes, igual 
+                que la estructura principal de un código html, la cabeza &lpar;thead&rpar; y el cuerpo &lpar;tbody&rpar;.</p>
+            <p>Dentro de la cabeza, se colocan las tr &lpar;Table rows o lineas de tabla&rpar; y en estas, se colocan los títulos
+                de cada columna de la tabla o th &lpar;Table header&rpar;. </p>
+            <p>Dentro del cuerpo, tambien se colocan las tr, pero dentro de estas se situan los datos de la propia tabla.</p>
+            <p>Para poder unir dos columnas en una línea de la tabla, se utilizaría el colspan dentro de la linea en la que se quieran juntar,
+                junto a la cantidad de columnas que se quieran unir. Para unir dos lineas, se utilizaría rowspan.</p>
+            <p>Formato de una tabla&colon;</p>
+            <pre class="cuadrado">
+                &lt;table border="1px"&gt;
 
-        </section>    
+                    &lt;thead&gt;
+
+                        &lt;tr&gt;
+                            &lt;th&gt;Producto&lt;&sol;th&gt;
+                            &lt;th&gt;Número de Serie&lt;&sol;th&gt;
+                            &lt;th&gt;Precio&lt;&sol;th&gt;
+                        &lt;&sol;tr&gt;
+
+                    &lt;&sol;thead&gt;
+
+                    &lt;tbody&gt;
+
+                        &lt;tr&gt;
+                            &lt;td&gt;Ratón Logitech&lt;&sol;td&gt;
+                            &lt;td&gt;332931&lt;&sol;td&gt;
+                            &lt;td&gt;23.99&euro;&lt;&sol;td&gt;
+                        &lt;&sol;tr&gt;
+
+                        &lt;tr&gt;
+                            &lt;td rowspan&equals;&quote;2&quote;&gt;Teclado Razer&lt;&sol;td&gt;
+                            &lt;td&gt;253687&lt;&sol;td&gt;
+                            &lt;td&gt;74.50&euro;&lt;&sol;td&gt;
+                        &lt;&sol;tr&gt;
+
+                        &lt;tr&gt;
+                            &lt;td&gt;266402&lt;&sol;td&gt;
+                            &lt;td&gt;42.05&euro;&lt;&sol;td&gt;
+                        &lt;&sol;tr&gt;
+
+                        &lt;tr&gt;
+                            &lt;td&gt;Fuente de alimentación Corsair&lt;&sol;td&gt;
+                            &lt;td&gt;313039&lt;&sol;td&gt;
+                            &lt;td&gt;80.00&euro;&lt;&sol;td&gt;
+                        &lt;&sol;tr&gt;
+
+                        &lt;tr&gt;
+                            &lt;td&gt;Cargador Nokia&lt;&sol;td&gt;
+                            &lt;td&gt;274494&lt;&sol;td&gt;
+                            &lt;td&gt;11.95&euro;&lt;&sol;td&gt;
+                        &lt;&sol;tr&gt;
+
+                    &lt;&sol;tbody&gt;
+
+                &lt;&sol;table&gt;
+            </pre>
+            <p>Esta tabla se verá en el documento como&colon;</p>
+            <!--El border sirve para separar con una línea las casillas de la tabla-->
+            <table border="1px">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Producto</th>
+                        <th>Número de Serie</th>
+                        <th>Precio</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Ratón Logitech</td>
+                        <td>332931</td>
+                        <td>23.99&euro;</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td rowspan="2">Teclado Razer</td>
+                        <td >253687</td>
+                        <td >74.50&euro;</td>
+
+                    </tr>
+                    
+                    <tr>
+                        <td>266402</td>
+                        <td>42.05&euro;</td>
+                    </tr>
+                    
+                    <tr>
+
+                        <td>Fuente de alimentación Corsair</td>
+                        <td>313039</td>
+                        <td>80.00&euro;</td>
+
+                    </tr>
+                    
+                    <tr>
+
+                        <td>Cargador Nokia</td>
+                        <td>274494</td>
+                        <td>11.95&euro;</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+        
+        <section>
+
+            <a href="#indice">
+
+                <img class="kokodayo" src="imagenes/VolverIndice.jpg" alt="Volver al Indice">
+
+            </a>
+
+        </section>
 
     </body>
 
